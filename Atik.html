@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Md. Atikur Rahman</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        header nav ul li a:hover {
+            background: #45a049;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        #home {
+            background:white;
+            color:#4CAF50;
+            height: 35vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        #home a {
+            display: inline-block;
+            background: #4CAF50;
+            color:black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        #home a:hover {
+            background:#fff;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+
+        /* About Section */
+        #about {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        #about img {
+            max-width: 100%;
+            border-radius: 10px;
+            flex: 1;
+        }
+
+        #about .content {
+            flex: 2;
+        }
+
+        #about .content p {
+            margin-bottom: 20px;
+        }
+
+  /* Skills Section */
+.skills {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    width: 150px;
+    text-align: center;
+}  
+
+
+    /* Projects Section */
+        #projects {
+            background: #f4f4f4;
+        }
+
+        #projects .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #projects .project {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 calc(33% - 40px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #projects .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        #projects .project h3 {
+            margin-bottom: 10px;
+        }
+
+        #projects .project p {
+            font-size: 0.9rem;
+        }
+
+        
+/* Services Section */
+.services-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.service {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+/* Contact Section */
+        #contact form {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #contact form input,
+        #contact form textarea {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #contact form button {
+            background: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        #contact form button:hover {
+            background: #45a049;
+        }
+
+       
+/* Footer */
+footer {
+    background:linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top:1px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+    </style>
+</head>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Md. Atikur Rahman</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#achievement">Achievement</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="contact-btn">Contact Me</a>
+        </div>
+    </header>
+
+     <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I am a problem solver, a developer, and a passionate coder!</p>
+        </div>
+    </section>
+
+
+    <!--About(start)-->
+    <table id="about" border="0" width="100%" 
+        cellpadding="0" cellspacing="0" bgcolor=" #f4f4f4">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" 
+                    cellspacing="0" width="80%" align="center">
+                    <tr>
+                        <td height="110" align="center" 
+                            valign="middle" colspan="2">
+                            <font face="Verdana" size="7" 
+                                color="#4CAF50">
+                                About Me
+                            </font>
+                            <hr color="#4CAF50" width="50">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="20%">
+                            <img src="pic.jpg"width="90%">
+                        </td>
+
+                        <td width="60%">
+                            <font face="Verdana" size="4" 
+                                color="Black">
+                                Thanks for your interest! Here’s a quick story about me and this website. I love solving programming problems in the most efficient ways. 
+                My primary expertise lies in C, C++, and JAVA. Among these, C++ and Data Structures & Algorithms are my strongest areas. 
+                I also work on Web Development, Linux, and databases.
+            </p>
+            <p>
+                This website is one of my Web Development projects, built entirely using HTML. Here, you’ll also find ideas for projects in different languages. 
+                Thanks again for reading this!
+                                
+                                
+                                
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+    </table>
+    <!--About(end)-->
+
+  <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skill-list">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+                
+            </div>
+        </div>
+    </section>
+   <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Description of Project 3.</p>
+            </div>
+        </div>
+    </section>
+<section id="services">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>Building responsive and modern websites.</p>
+            </div>
+            
+            <div class="service">
+                <h3>Programming Solutions</h3>
+                <p>Optimized problem-solving using C++, Java, and more.</p>
+            </div>
+        </div>
+    </section>
+
+   
+ <!--Achievement(start)-->
+    <table id="about" border="0" width="100%" 
+        cellpadding="0" cellspacing="0" bgcolor="#f4f4f4">
+        <tr>
+            <td>
+                <table border="0" cellpadding="15" 
+                    cellspacing="0" width="80%" align="center">
+                    <tr>
+                        <td height="130" align="center" 
+                            valign="middle" colspan="2">
+                            <font face="Verdana" size="7" 
+                                color="#4CAF50">
+                                Achievement
+                            </font>
+                            <hr color="#ADD8E6" width="40">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="20%">
+                            <img src="Sch.jpg"width="80%">
+                        </td>
+
+                        <td width="50%">
+                            <font face="Verdana" size="4" 
+                                color="black">
+                               "I am extremely delighted and grateful 
+                              to receive a scholarship from 
+                       Dutch-Bangla Bank. This recognition is not only a testament to my 
+                       dedication and hard work but also an inspiration to achieve my 
+                       goals more effectively. I sincerely express my gratitude to the 
+                           authorities of Dutch-Bangla Bank. This support will play a 
+                           significant role in my educational journey, and I promise to
+                        honor this recognition through my future achievements."
+                                
+                                
+                                
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+    </table>
+    <!--About(end)-->
+
+
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+<!--Footer1(start)-->
+<div id="footer" style="background-color: #4CAF50; padding: 10px;">
+    <div style="display: flex; justify-content: center; gap: 40px; align-items: center;">
+        <!-- LinkedIn -->
+        <div>
+            <b>LinkedIn</b>
+            <a href="#" style="text-decoration:none; color: white;">
+                <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" style="width: 20px; vertical-align: middle;">
+            </a>
+        </div>
+        
+
+        <!-- Twitter -->
+        <div>
+            <b>Twitter</b>
+            <a href="#" style="text-decoration:none; color: white;">
+                <img src="12.png" alt="Twitter" style="width: 20px; vertical-align: middle;">
+            </a>
+        </div>
+        
+        <!-- Instagram -->
+        <div>
+            <b>Instagram</b>
+            <a href="#" style="text-decoration:none; color: white;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; vertical-align: middle;">
+            </a>
+        </div>
+
+        <!-- Facebook -->
+        <div>
+            <b>Facebook</b>
+            <a href="#" style="text-decoration:none; color: white;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 20px; vertical-align: middle;">
+            </a>
+        </div>
+    </div>
+</div>
+<!--Footer1(end)-->
+   <!--Footer1(end)-->
+
+
+     <footer>
+        <p>© 2025 Md Atikur Rahman | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
